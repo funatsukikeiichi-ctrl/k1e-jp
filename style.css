@@ -1,0 +1,663 @@
+/* ===== K1e.jp — Dark Mysterious Music Page ===== */
+
+:root {
+  --bg: #0a0a0f;
+  --bg2: #111118;
+  --bg3: #16161f;
+  --gold: #c9a84c;
+  --gold-light: #e8d48b;
+  --gold-dark: #8a6d2b;
+  --text: #e8e6e3;
+  --text-dim: #8a8a95;
+  --text-muted: #555560;
+  --accent: #c9a84c;
+  --radius: 12px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.gold { color: var(--gold); }
+.center { text-align: center; }
+
+/* ===== NAV ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  transition: var(--transition);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--gold);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: var(--transition);
+}
+
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: var(--transition);
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 16px 24px 24px;
+  gap: 16px;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.nav-mobile.open { display: flex; }
+
+.nav-mobile a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 1rem;
+  padding: 8px 0;
+  transition: var(--transition);
+}
+
+.nav-mobile a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(100, 60, 20, 0.06) 0%, transparent 50%),
+    var(--bg);
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-100vh) scale(1.5); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 100px 24px 60px;
+}
+
+.hero-album-art {
+  width: 280px;
+  height: 280px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow:
+    0 0 60px rgba(201, 168, 76, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  animation: albumGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes albumGlow {
+  0% { box-shadow: 0 0 40px rgba(201, 168, 76, 0.1), 0 20px 60px rgba(0, 0, 0, 0.5); }
+  100% { box-shadow: 0 0 80px rgba(201, 168, 76, 0.25), 0 20px 60px rgba(0, 0, 0, 0.5); }
+}
+
+.hero-title {
+  margin-bottom: 12px;
+}
+
+.hero-title-k1e {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 12vw, 8rem);
+  letter-spacing: 12px;
+  color: var(--gold);
+  text-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
+  display: block;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 300;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #0a0a0f;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.hero-scroll-hint span {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.scroll-arrow {
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 48px;
+}
+
+/* ===== ABOUT ===== */
+.about { background: var(--bg2); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.about-desc {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--text-dim);
+  margin-bottom: 32px;
+}
+
+.about-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+.meta-value {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-img {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* ===== MUSIC / TRACKLIST ===== */
+.music {
+  background: var(--bg);
+}
+
+.tracklist {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.track {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+  transition: var(--transition);
+}
+
+.track:hover {
+  background: rgba(201, 168, 76, 0.02);
+}
+
+.track-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.track-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  min-width: 36px;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.track-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  transition: var(--transition);
+}
+
+.track:hover .track-title { color: var(--gold); }
+
+.track-tag {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.track-toggle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+  min-width: 24px;
+  text-align: center;
+}
+
+.track.open .track-toggle {
+  transform: rotate(45deg);
+  color: var(--gold);
+}
+
+.track-lyrics {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.track.open .track-lyrics {
+  max-height: 1200px;
+}
+
+.lyrics-content {
+  padding: 0 16px 32px 72px;
+}
+
+.lyrics-section {
+  margin-bottom: 20px;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+.lyrics-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .lyrics-content { padding-left: 16px; }
+}
+
+/* ===== WORLD VIEW ===== */
+.worldview {
+  background: var(--bg2);
+}
+
+.worldview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.wv-card {
+  background: rgba(201, 168, 76, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  transition: var(--transition);
+}
+
+.wv-card:hover {
+  border-color: rgba(201, 168, 76, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.wv-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.wv-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.wv-card p {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* ===== LINKS ===== */
+.links { background: var(--bg); }
+
+.links-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 40px;
+  background: var(--bg3);
+  border: 1px solid rgba(201, 168, 76, 0.08);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+  min-width: 160px;
+}
+
+.link-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(201, 168, 76, 0.1);
+}
+
+.link-icon {
+  color: var(--gold);
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.link-card:hover .link-icon { opacity: 1; }
+
+.link-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.link-card:hover .link-name { color: var(--gold); }
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 60px 0 40px;
+  text-align: center;
+  background: var(--bg);
+  border-top: 1px solid rgba(201, 168, 76, 0.06);
+}
+
+.footer-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.footer-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.5;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: var(--text);
+}

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K1e — ALL IN MY SKY</title>
+  <meta name="description" content="K1e Official Music Page — J-Pop Artist. Album: ALL IN MY SKY (2026)">
+  <meta property="og:title" content="K1e — ALL IN MY SKY">
+  <meta property="og:description" content="Glitch the World. Burn the Scale. 一度きりの login, ignite.">
+  <meta property="og:image" content="assets/artwork/album-splash.jpeg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="assets/images/k1e-logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@300;400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/images/k1e-logo.jpg" alt="K1e" class="nav-logo-img">
+        <span>K1e</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#music">Music</a>
+        <a href="#worldview">World View</a>
+        <a href="#links">Links</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#music">Music</a>
+      <a href="#worldview">World View</a>
+      <a href="#links">Links</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <img src="assets/artwork/album-splash.jpeg" alt="ALL IN MY SKY" class="hero-album-art">
+      <h1 class="hero-title">
+        <span class="hero-title-k1e">K1e</span>
+      </h1>
+      <p class="hero-subtitle">ALL IN MY SKY</p>
+      <p class="hero-tagline">一度きりの login, ignite.</p>
+      <div class="hero-cta">
+        <a href="https://music.apple.com/jp/artist/k1e/1742895467" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.802.42.127.856.187 1.297.228.473.044.948.062 1.423.067.39.003.78 0 1.17 0h8.78c.396 0 .79.003 1.184-.003.468-.008.935-.04 1.398-.104.518-.072 1.02-.2 1.487-.427 1.147-.557 1.96-1.434 2.452-2.6.224-.53.336-1.09.393-1.663.043-.432.063-.866.072-1.3.003-.15 0-.3 0-.45V6.124zM17.13 16.96c0 .186-.008.374-.034.558a2.366 2.366 0 01-.28.874c-.397.7-1.013 1.07-1.8 1.156-.17.02-.34.023-.51.013-.58-.032-1.12-.185-1.565-.55a2.085 2.085 0 01-.714-1.136 2.407 2.407 0 01-.058-.676c.04-.595.26-1.1.7-1.5.39-.36.85-.56 1.368-.62.2-.024.4-.036.6-.05.226-.016.453-.025.68-.05.233-.024.392-.126.472-.347.05-.14.063-.286.063-.433V8.265c0-.1-.015-.2-.048-.295-.058-.17-.185-.27-.36-.293a2.487 2.487 0 00-.35-.02l-5.61.88c-.034.005-.068.013-.1.023-.22.058-.33.18-.36.404-.01.07-.013.14-.013.21v7.32c0 .2-.01.4-.038.6-.063.46-.2.887-.527 1.24-.424.46-.97.66-1.58.73a3.2 3.2 0 01-.628.008c-.55-.037-1.063-.19-1.49-.535a2.16 2.16 0 01-.742-1.205 2.17 2.17 0 01-.037-.793c.08-.57.313-1.06.748-1.44.372-.33.81-.53 1.294-.618.247-.045.498-.073.748-.1.186-.018.372-.035.557-.058.27-.033.448-.166.534-.427.047-.145.06-.297.06-.45V6.26c0-.242.037-.478.12-.704.13-.36.39-.582.752-.67.135-.034.274-.06.413-.08l6.37-1c.09-.015.18-.024.27-.03.27-.018.445.12.503.39.017.08.023.163.023.245v11.35z"/></svg>
+          Apple Music
+        </a>
+        <a href="#music" class="btn btn-ghost">Explore Tracks</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="assets/images/k1e-logo.jpg" alt="K1e" class="about-img">
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">About <span class="gold">K1e</span></h2>
+          <p class="about-desc">
+            日本語と英語が交錯する、境界線のない音楽。<br>
+            社会のスケールに測られることを拒み、<br>
+            自分だけのPathを歩む——<br>
+            それがK1eの世界。
+          </p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label">Genre</span>
+              <span class="meta-value">J-Pop / Alternative</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Album</span>
+              <span class="meta-value">ALL IN MY SKY (2026)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Tracks</span>
+              <span class="meta-value">21 Songs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MUSIC ===== -->
+  <section class="section music" id="music">
+    <div class="container">
+      <h2 class="section-title center">
+        <span class="gold">Track</span> List
+      </h2>
+      <p class="section-sub center">Click a track to reveal its lyrics</p>
+
+      <div class="tracklist">
+
+        <!-- Track 1 -->
+        <div class="track" data-track="1">
+          <div class="track-header">
+            <div class="track-num">01</div>
+            <div class="track-info">
+              <h3 class="track-title">GLITCH THE WORLD</h3>
+              <p class="track-tag">Cyberpunk / Game metaphor</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section"><span class="lyrics-label">[Intro]</span><br>
+Welcome to the game<br>
+ログアウト不可の online<br>
+Loading screen, heartbeat<br>
+終わらない tutorial time</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Chorus]</span><br>
+Not an NPC<br>
+この役は演じない<br>
+Break the game<br>
+決められたルールに fire<br><br>
+Glitch the world<br>
+境界線を越えて<br>
+No respawn for this life<br>
+一度きりの login, ignite</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Outro]</span><br>
+Maintenance denied<br>
+Server down? still alive<br>
+Tutorial ends here<br>
+Play wrong.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="track" data-track="2">
+          <div class="track-header">
+            <div class="track-num">02</div>
+            <div class="track-info">
+              <h3 class="track-title">BURN THE SCALE</h3>
+              <p class="track-tag">Rebellion / Anti-meritocracy</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section"><span class="lyrics-label">[Verse 1]</span><br>
+価値なし前提　presetされたscene<br>
+疑えないように組まれたroutine<br>
+効率・合理・安定のring<br>
+安心の中で窒息するdream</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Chorus]</span><br>
+Burn the scale<br>
+焼き切れvalue game<br>
+No name, no frame<br>
+命でbetするphase<br><br>
+Burn the scale<br>
+信じないlie<br>
+Exist loud<br>
+消えるくらいなら<br>
+燃えろ今</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Outro]</span><br>
+価値は<br>
+与えられない<br>
+燃やしたあと<br>
+残るheat<br>
+それだけ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="track" data-track="3">
+          <div class="track-header">
+            <div class="track-num">03</div>
+            <div class="track-info">
+              <h3 class="track-title">ALL IN MY SKY</h3>
+              <p class="track-tag">Title track / Manifesto</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section"><span class="lyrics-label">[Verse 1]</span><br>
+寝静まる街、星のない空<br>
+退屈な日々、窮屈な時間<br>
+This comfort zone, a velvet cage<br>
+心の声 just background noise</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Chorus]</span><br>
+ALL IN MY SKY<br>
+Bet my soul, no alibi<br>
+限界なんて幻想<br>
+Fly beyond, just let it ignite<br><br>
+ALL IN MY SKY<br>
+響け、自分だけの Vibe<br>
+This fire inside, can't deny<br>
+今こそ Break the loop and rise</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Rap Verse]</span><br>
+アスファルトに刻んだ足跡が<br>
+教科書代わりの survival law<br>
+正解なんて誰もくれなかった<br>
+間違いの数だけ強くなった<br>
+裏切り、沈黙、夜明け前<br>
+ポケットの中は希望と小銭<br>
+甘い話？もう聞き飽きた<br>
+命削る覚悟で立ってきた<br>
+Safeな道は最初からない<br>
+だから俺は空に賭ける、ALL IN MY SKY</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Rap Verse 2]</span><br>
+拳じゃなく言葉を選んだ夜<br>
+引き金よりも heartbeat を信じろ<br>
+傷は勲章、過去は糧<br>
+逃げなかった事実が俺の badge<br>
+逃げ場なんて最初から無い<br>
+生き延びた理由は一つだけ<br>
+この空を諦めなかっただけ<br>
+これが俺のALL IN MY SKY</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Final]</span><br>
+Bet it, bet it — all in your sky<br>
+命のルール、rewrite it now<br>
+This voice, this choice — make it loud<br>
+Don't fake it — just ride the vibe</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 4 -->
+        <div class="track" data-track="4">
+          <div class="track-header">
+            <div class="track-num">04</div>
+            <div class="track-info">
+              <h3 class="track-title">絶対Path</h3>
+              <p class="track-tag">Ballad / Life journey</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section">
+歩んできた道のり<br>
+幾つもの分かれ道を超えて<br>
+知り得ぬ数多Possibility<br>
+数え切れぬ程置いてきた</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Chorus]</span><br>
+星のように流れて消えていった<br>
+残された動かせぬResult<br>
+これは僕の絶対Path<br>
+決して変えることはできない</p>
+
+              <p class="lyrics-section">
+終わってしまった恋も<br>
+敗れ消えていった夢も<br>
+全てがこのパズルのピース<br>
+何一つとして欠かせない</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Rap — female vocal ver.]</span><br>
+歩いてきた道は smooth じゃねぇ<br>
+血と泥で刻んだ proof の連鎖<br>
+正解なんて最初からない<br>
+I chose this path, I paid the price<br><br>
+失った love, 崩れた dream<br>
+でも全部 still breathing in me<br>
+傷は勲章、scars are real<br>
+Fake な正義じゃ heart は heal しねぇ</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Rap 2]</span><br>
+Pick up the pieces, one by one<br>
+逃げ場のない夜も越えて run<br>
+They said "give up", I said "no way"<br>
+運命ごと蹴り飛ばす 絶対Path<br>
+譲れないもんが ここにある<br>
+I walk alone, but I never fall back<br><br>
+涙も regret も 抱きしめて<br>
+全部引き連れ 前に出るだけ<br>
+これは俺の story, no replace<br>
+削れない soul, これが絶対Path</p>
+
+              <p class="lyrics-section">愛</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 5 -->
+        <div class="track" data-track="5">
+          <div class="track-header">
+            <div class="track-num">05</div>
+            <div class="track-info">
+              <h3 class="track-title">Chaos in a Ship in a Bottle</h3>
+              <p class="track-tag">Hard / Rap / Liberation</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section"><span class="lyrics-label">[Hook]</span><br>
+流れるままに踊ろう<br>
+Just let it go, just let it go<br>
+感じるままに歌おう<br>
+Enjoy now, enjoy the flow</p>
+
+              <p class="lyrics-section"><span class="lyrics-label">[Drop]</span><br>
+Chaos in a ship in a bottle<br>
+Shatter the shell, rewrite the model<br>
+命を燃やせ圧倒的なblaze<br>
+break it throughこの生き様叩きつける</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 6 -->
+        <div class="track" data-track="6">
+          <div class="track-header">
+            <div class="track-num">06</div>
+            <div class="track-info">
+              <h3 class="track-title">SOUL IN OVERLOAD</h3>
+              <p class="track-tag">Emotional / Soul dump</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section">
+あくせく変わってく僕の世界<br>
+前に倣え、横に倣え<br>
+条件反射で右往左往してる</p>
+
+              <p class="lyrics-section">
+涙流せ　魂揺らせ<br>
+今ここで全部dump<br>
+Don't fake yourself<br>
+ぶちまけちゃえばいいよ？</p>
+
+              <p class="lyrics-section">
+I'm not your data, not your code,<br>
+I'm just a soul on overload.<br>
+でもね、それでいい。<br>
+痛みも涙もlifeの証。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 7 -->
+        <div class="track" data-track="7">
+          <div class="track-header">
+            <div class="track-num">07</div>
+            <div class="track-info">
+              <h3 class="track-title">Algorithm Junkies</h3>
+              <p class="track-tag">Rap / Social critique</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section">
+ザ・アルゴリズムジャンキー　バビディビビディブー<br>
+メタ情報の波を右往左往　踊らされるフール<br>
+空っぽのアタマで今日もPV生産</p>
+
+              <p class="lyrics-section">
+手元のデバイスからマインドをスキャン<br>
+欲しい餌与えられ思惑通りネガキャン<br>
+繰り返し調教され最早視野狭窄<br>
+錯乱したアタマでドヤ顔　赤の他人こき下ろす</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 8 -->
+        <div class="track" data-track="8">
+          <div class="track-header">
+            <div class="track-num">08</div>
+            <div class="track-info">
+              <h3 class="track-title">Find the Way</h3>
+              <p class="track-tag">Motivational / Self-discovery</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section">
+雨が降ろうが晴れようが<br>
+Just Let it go 為すがままに<br>
+瞑想朝活にジャーナリング<br>
+奥に灯る熱量を確かめるように</p>
+
+              <p class="lyrics-section">
+毎日がゲーム終わりなんてない<br>
+負ければ次の勝利目指して<br>
+勝てば慢心戒めて<br>
+日々更新する過去最高記録</p>
+
+              <p class="lyrics-section">
+今僕が歩むこの道 I've found my way</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 9 -->
+        <div class="track" data-track="9">
+          <div class="track-header">
+            <div class="track-num">09</div>
+            <div class="track-info">
+              <h3 class="track-title">Fading Away</h3>
+              <p class="track-tag">Social commentary / Sunset</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section">
+二次三次の情報を鵜呑みにして<br>
+思考も選択も全部 他人任せに慣れて</p>
+
+              <p class="lyrics-section">
+先人たちの栄光の残滓<br>
+消費し尽くすまで終わらない祭り<br>
+誰一人責任を持たぬ 被害者ぶって<br>
+The sunset fading away<br>
+ただ見守る 何もできぬまま</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 10 -->
+        <div class="track" data-track="10">
+          <div class="track-header">
+            <div class="track-num">10</div>
+            <div class="track-info">
+              <h3 class="track-title">Thousands of Words</h3>
+              <p class="track-tag">Ballad / Loss &amp; longing</p>
+            </div>
+            <div class="track-toggle">+</div>
+          </div>
+          <div class="track-lyrics">
+            <div class="lyrics-content">
+              <p class="lyrics-section">
+何時からだったろう<br>
+交わす言葉が少なくなって<br>
+何時からだったろう<br>
+視線交わすことなくなって</p>
+
+              <p class="lyrics-section">
+ずっと続くと信じていた<br>
+固く結ばれた絆<br>
+気づかぬ間綻びて</p>
+
+              <p class="lyrics-section">
+Thousands of words<br>
+かける言葉わかんなくて<br>
+Thousands of words<br>
+形にならず消えていく<br>
+Thousands of words so far</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /tracklist -->
+    </div>
+  </section>
+
+  <!-- ===== WORLD VIEW ===== -->
+  <section class="section worldview" id="worldview">
+    <div class="container">
+      <h2 class="section-title center">
+        <span class="gold">World</span> View
+      </h2>
+      <div class="worldview-grid">
+        <div class="wv-card">
+          <div class="wv-icon">&#x1F525;</div>
+          <h3>Burn the Rules</h3>
+          <p>用意されたスケールなんか燃やしてしまえ。価値は与えられるものじゃない——燃やしたあとに残るheat、それだけ。</p>
+        </div>
+        <div class="wv-card">
+          <div class="wv-icon">&#x1F3AE;</div>
+          <h3>Glitch the System</h3>
+          <p>NPCにはならない。このゲームのバグを見つけて、ルールごと書き換えろ。No respawn — 一度きりのplayを全力で。</p>
+        </div>
+        <div class="wv-card">
+          <div class="wv-icon">&#x2728;</div>
+          <h3>ALL IN</h3>
+          <p>限界なんて幻想。Bet my soul, no alibi. 命のルールをrewriteして、自分だけのskyへ飛べ。</p>
+        </div>
+        <div class="wv-card">
+          <div class="wv-icon">&#x1F30C;</div>
+          <h3>絶対Path</h3>
+          <p>終わった恋も、消えた夢も、全てがパズルのピース。何一つ欠かせない。これが僕の絶対Path。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LINKS ===== -->
+  <section class="section links" id="links">
+    <div class="container">
+      <h2 class="section-title center">
+        <span class="gold">Listen</span> Now
+      </h2>
+      <div class="links-grid">
+        <a href="https://music.apple.com/jp/artist/k1e/1742895467" target="_blank" rel="noopener" class="link-card">
+          <div class="link-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.802.42.127.856.187 1.297.228.473.044.948.062 1.423.067.39.003.78 0 1.17 0h8.78c.396 0 .79.003 1.184-.003.468-.008.935-.04 1.398-.104.518-.072 1.02-.2 1.487-.427 1.147-.557 1.96-1.434 2.452-2.6.224-.53.336-1.09.393-1.663.043-.432.063-.866.072-1.3.003-.15 0-.3 0-.45V6.124z"/></svg>
+          </div>
+          <span class="link-name">Apple Music</span>
+        </a>
+        <a href="https://www.deezer.com/us/artist/14795931" target="_blank" rel="noopener" class="link-card">
+          <div class="link-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.81 4.16v3.03H24V4.16h-5.19zM6.27 8.38v3.027h5.19V8.38H6.27zm12.54 0v3.027H24V8.38h-5.19zM6.27 12.566v3.027h5.19v-3.027H6.27zm6.27 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19zM0 16.752v3.027h5.19v-3.027H0zm6.27 0v3.027h5.19v-3.027H6.27zm6.27 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19z"/></svg>
+          </div>
+          <span class="link-name">Deezer</span>
+        </a>
+        <a href="https://linktr.ee/k1e_official" target="_blank" rel="noopener" class="link-card">
+          <div class="link-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M7.953 15.066l-.038-2.296 4.09-4.09-4.09-4.09L12 .5l4.085 4.09-4.09 4.09 4.09 4.09-.038 2.296H7.953zm4.05 3.672V24h.003v-5.262h-.004z"/></svg>
+          </div>
+          <span class="link-name">Linktree</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <img src="assets/images/k1e-logo.jpg" alt="K1e" class="footer-logo">
+      <p class="footer-text">&copy; 2026 K1e — ALL IN MY SKY</p>
+      <p class="footer-sub">Play wrong. Play loud. Play now.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

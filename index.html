@@ -134,6 +134,40 @@
     </div>
   </section>
 
+  <!-- ===== ALBUM ===== -->
+  <section class="section album" id="album">
+    <div class="container">
+      <div class="album-showcase">
+        <div class="album-art-wrap">
+          <img src="assets/artwork/album-main.jpeg" alt="ALL IN MY SKY" class="album-art-large">
+        </div>
+        <div class="album-info">
+          <h2 class="section-title">Album</h2>
+          <h3 class="album-name gold">ALL IN MY SKY</h3>
+          <p class="album-desc">15 tracks. 1つの空の下に集まった全ての想い。</p>
+          <ol class="album-tracklist">
+            <li><a href="#track-zettai-path">絶対Path</a></li>
+            <li><a href="#track-sunset-fading-away">The sunset fading away</a></li>
+            <li><a href="#track-chaos">Chaos in a Ship in a Bottle</a></li>
+            <li><a href="#track-soul-on-overload">Soul on overload</a></li>
+            <li><a href="#track-blowing">Blowing in the wind</a></li>
+            <li><a href="#track-dissolving-away">Dissolving away</a></li>
+            <li><a href="#track-the-lapin">The Lapin</a></li>
+            <li><a href="#track-follow-your-will">Follow your will</a></li>
+            <li><a href="#track-watayuki">わたゆき</a></li>
+            <li><a href="#track-just-running-through">Just Running Through</a></li>
+            <li><a href="#track-all-in-my-sky">ALL IN MY SKY</a></li>
+            <li><a href="#track-i-can-fly">I can fly to the stars</a></li>
+            <li><a href="#track-role-around">Role Around</a></li>
+            <li><a href="#track-find-the-way">Find the way</a></li>
+            <li><a href="#track-absolute-path">Absolute Path</a></li>
+          </ol>
+          <a href="https://music.apple.com/jp/artist/k1e/1742895467" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Listen on Apple Music</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== MUSIC ===== -->
   <section class="section music" id="music">
     <div class="container">
@@ -145,77 +179,45 @@
       <!-- Filter tabs -->
       <div class="music-filters">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="2026">2026</button>
-        <button class="filter-btn" data-filter="2025">2025 Remake</button>
-        <button class="filter-btn" data-filter="original">Original</button>
-        <button class="filter-btn" data-filter="rap">RAP</button>
+        <button class="filter-btn" data-filter="latest">Latest</button>
+        <button class="filter-btn" data-filter="album">Album</button>
+        <button class="filter-btn" data-filter="single">Singles</button>
+        <button class="filter-btn" data-filter="remix">Remix / Live</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
       </div>
 
       <div class="music-grid" id="musicGrid">
 
-        <!-- ALL IN MY SKY -->
-        <a href="music/all-in-my-sky.html" class="music-card" data-tags="2026 original">
+        <!-- ========== LATEST SINGLES ========== -->
+
+        <a href="music/burn-the-scale.html" class="music-card" data-tags="latest single" id="track-burn-the-scale">
           <div class="music-card-art">
-            <img src="assets/artwork/album-splash.jpeg" alt="ALL IN MY SKY" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/burn-the-scale.png" alt="Burn the Scale" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>ALL IN MY SKY</h3>
-            <p>Title Track / Manifesto</p>
+            <h3>Burn the Scale</h3>
+            <p class="music-card-badge">NEW</p>
           </div>
         </a>
 
-        <!-- ALL IN MY SKY RAP -->
-        <a href="music/all-in-my-sky-rap.html" class="music-card" data-tags="2026 rap">
+        <a href="music/glitch-the-world.html" class="music-card" data-tags="latest single" id="track-glitch-the-world">
           <div class="music-card-art">
-            <img src="assets/artwork/album-splash.jpeg" alt="ALL IN MY SKY RAP" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>ALL IN MY SKY <span class="tag-small">RAP ver.</span></h3>
-            <p>feat. KIVA</p>
-          </div>
-        </a>
-
-        <!-- GLITCH THE WORLD -->
-        <a href="music/glitch-the-world.html" class="music-card" data-tags="2026 original">
-          <div class="music-card-art">
-            <img src="assets/tracks/glitch-the-world.jpg" alt="GLITCH THE WORLD" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/glitch-the-world.png" alt="GLITCH THE WORLD" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>GLITCH THE WORLD</h3>
-            <p>Cyberpunk / Game Metaphor</p>
+            <p class="music-card-badge">NEW</p>
           </div>
         </a>
 
-        <!-- BURN THE SCALE -->
-        <a href="music/burn-the-scale.html" class="music-card" data-tags="2026 original">
-          <div class="music-card-art">
-            <img src="assets/tracks/burn-the-scale.jpg" alt="BURN THE SCALE" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>BURN THE SCALE</h3>
-            <p>Rebellion / Anti-Meritocracy</p>
-          </div>
-        </a>
+        <!-- ========== ALBUM: ALL IN MY SKY ========== -->
 
-        <!-- 絶対Path -->
-        <a href="music/zettai-path.html" class="music-card" data-tags="2025 original">
+        <a href="music/zettai-path.html" class="music-card" data-tags="album" id="track-zettai-path">
           <div class="music-card-art">
-            <img src="assets/tracks/zettai-path.jpg" alt="絶対Path" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/zettai-path.jpeg" alt="絶対Path" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>絶対Path</h3>
@@ -223,111 +225,98 @@
           </div>
         </a>
 
-        <!-- 絶対Path RAP -->
-        <a href="music/zettai-path-rap.html" class="music-card" data-tags="2025 rap">
+        <a href="music/sunset-fading-away.html" class="music-card" data-tags="album" id="track-sunset-fading-away">
           <div class="music-card-art">
-            <img src="assets/tracks/zettai-path-rap.jpg" alt="絶対Path RAP" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/the-sunset-fading-away.png" alt="The sunset fading away" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>絶対Path <span class="tag-small">RAP ver.</span></h3>
-            <p>feat. SHELA &amp; KIVA</p>
+            <h3>The sunset fading away</h3>
+            <p>Social Commentary</p>
           </div>
         </a>
 
-        <!-- Chaos in a Ship in a Bottle -->
-        <a href="music/chaos-in-a-ship.html" class="music-card" data-tags="original">
+        <a href="music/chaos-in-a-ship.html" class="music-card" data-tags="album" id="track-chaos">
           <div class="music-card-art">
-            <img src="assets/tracks/chaos-in-a-ship.jpg" alt="Chaos in a Ship in a Bottle" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/chaos-in-a-ship.png" alt="Chaos in a Ship in a Bottle" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>Chaos in a Ship in a Bottle</h3>
-            <p>Hard / Rap / Liberation</p>
+            <p>Hard / Liberation</p>
           </div>
         </a>
 
-        <!-- SOUL IN OVERLOAD -->
-        <a href="music/soul-in-overload.html" class="music-card" data-tags="original">
+        <a href="music/soul-on-overload.html" class="music-card" data-tags="album" id="track-soul-on-overload">
           <div class="music-card-art">
-            <img src="assets/artwork/album-dark.jpeg" alt="SOUL IN OVERLOAD" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/soul-on-overload.jpeg" alt="Soul on overload" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>SOUL IN OVERLOAD</h3>
+            <h3>Soul on overload</h3>
             <p>Emotional / Soul Dump</p>
           </div>
         </a>
 
-        <!-- Find the Way -->
-        <a href="music/find-the-way.html" class="music-card" data-tags="2025">
+        <a href="music/blowing-in-the-wind.html" class="music-card" data-tags="album" id="track-blowing">
           <div class="music-card-art">
-            <img src="assets/artwork/album-wings-half.jpeg" alt="Find the Way" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/blowing-in-the-wind.png" alt="Blowing in the wind" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>Find the Way</h3>
-            <p>Motivational / Self-Discovery</p>
+            <h3>Blowing in the wind</h3>
+            <p>Resilience / Wind</p>
           </div>
         </a>
 
-        <!-- I Can Fly to the Stars -->
-        <a href="music/i-can-fly-to-the-stars.html" class="music-card" data-tags="2025">
+        <a href="music/dissolving-away.html" class="music-card" data-tags="album" id="track-dissolving-away">
           <div class="music-card-art">
-            <img src="assets/tracks/i-can-fly.jpg" alt="I Can Fly to the Stars" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/dissolving-away.jpeg" alt="Dissolving away" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>I Can Fly to the Stars</h3>
-            <p>Emotional / Escape</p>
-          </div>
-        </a>
-
-        <!-- Dissolving Away -->
-        <a href="music/dissolving-away.html" class="music-card" data-tags="2025">
-          <div class="music-card-art">
-            <img src="assets/tracks/dissolving-away.jpg" alt="Dissolving Away" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>Dissolving Away</h3>
+            <h3>Dissolving away</h3>
             <p>Melancholy / Loss</p>
           </div>
         </a>
 
-        <!-- Dissolving Away Acoustic -->
-        <a href="music/dissolving-away-acoustic.html" class="music-card" data-tags="2026">
+        <a href="music/the-lapin.html" class="music-card" data-tags="album" id="track-the-lapin">
           <div class="music-card-art">
-            <img src="assets/tracks/dissolving-away-acoustic.jpg" alt="Dissolving Away Acoustic" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/the-lapin.png" alt="The Lapin" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>Dissolving Away <span class="tag-small">Acoustic</span></h3>
-            <p>Acoustic Arrange 2026</p>
+            <h3>The Lapin</h3>
+            <p>Regret / Memory</p>
           </div>
         </a>
 
-        <!-- Just Running Through -->
-        <a href="music/just-running-through.html" class="music-card" data-tags="2025">
+        <a href="music/follow-your-will.html" class="music-card" data-tags="album" id="track-follow-your-will">
           <div class="music-card-art">
-            <img src="assets/tracks/just-running-through.jpg" alt="Just Running Through" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/follow-your-will.png" alt="Follow your will" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Follow your will</h3>
+            <p>Existential / Freedom</p>
+          </div>
+        </a>
+
+        <a href="music/watayuki.html" class="music-card" data-tags="album" id="track-watayuki">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/watayuki.png" alt="わたゆき" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>わたゆき</h3>
+            <p>Ballad / Memory &amp; Spring</p>
+          </div>
+        </a>
+
+        <a href="music/just-running-through.html" class="music-card" data-tags="album" id="track-just-running-through">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/just-running-through.png" alt="Just Running Through" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>Just Running Through</h3>
@@ -335,13 +324,32 @@
           </div>
         </a>
 
-        <!-- Role Around -->
-        <a href="music/role-around.html" class="music-card" data-tags="2025">
+        <a href="music/all-in-my-sky.html" class="music-card" data-tags="album" id="track-all-in-my-sky">
           <div class="music-card-art">
-            <img src="assets/tracks/role-around.jpg" alt="Role Around" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/all-in-my-sky.png" alt="ALL IN MY SKY" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>ALL IN MY SKY</h3>
+            <p>Title Track / Manifesto</p>
+          </div>
+        </a>
+
+        <a href="music/i-can-fly-to-the-stars.html" class="music-card" data-tags="album" id="track-i-can-fly">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/i-can-fly-to-the-stars.png" alt="I can fly to the stars" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>I can fly to the stars</h3>
+            <p>Emotional / Escape</p>
+          </div>
+        </a>
+
+        <a href="music/role-around.html" class="music-card" data-tags="album" id="track-role-around">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/role-around.png" alt="Role Around" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>Role Around</h3>
@@ -349,83 +357,56 @@
           </div>
         </a>
 
-        <!-- Follow Your Will -->
-        <a href="music/follow-your-will.html" class="music-card" data-tags="2025">
+        <a href="music/find-the-way.html" class="music-card" data-tags="album" id="track-find-the-way">
           <div class="music-card-art">
-            <img src="assets/artwork/album-clean.jpeg" alt="Follow Your Will" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/find-the-way.png" alt="Find the way" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>Follow Your Will</h3>
-            <p>Existential / Freedom</p>
+            <h3>Find the way</h3>
+            <p>Motivational / Self-Discovery</p>
           </div>
         </a>
 
-        <!-- The Lapin Girl -->
-        <a href="music/the-lapin.html" class="music-card" data-tags="2025">
+        <a href="music/absolute-path.html" class="music-card" data-tags="album" id="track-absolute-path">
           <div class="music-card-art">
-            <img src="assets/tracks/the-lapin.jpg" alt="The Lapin Girl" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/absolute-path.png" alt="Absolute Path" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>The Lapin Girl</h3>
-            <p>Regret / Memory</p>
+            <h3>Absolute Path</h3>
+            <p>English ver. / Closing</p>
           </div>
         </a>
 
-        <!-- Blowing in the Wind -->
-        <a href="music/blowing-in-the-wind.html" class="music-card" data-tags="2025">
-          <div class="music-card-art">
-            <img src="assets/artwork/album-wings-outline.jpeg" alt="Blowing in the Wind" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>Blowing in the Wind</h3>
-            <p>Resilience / Wind</p>
-          </div>
-        </a>
+        <!-- ========== SINGLES (アルバム外) ========== -->
 
-        <!-- Fading Away -->
-        <a href="music/fading-away.html" class="music-card" data-tags="original">
+        <a href="music/thousands-of-words.html" class="music-card" data-tags="single" id="track-thousands-of-words">
           <div class="music-card-art">
-            <img src="assets/tracks/fading-away.jpg" alt="Fading Away" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/thousands-of-words.png" alt="Thousands of words" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>The Sunset Fading Away</h3>
-            <p>Social Commentary</p>
-          </div>
-        </a>
-
-        <!-- Thousands of Words -->
-        <a href="music/thousands-of-words.html" class="music-card" data-tags="2026">
-          <div class="music-card-art">
-            <img src="assets/tracks/thousands-of-words.jpg" alt="Thousands of Words" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>Thousands of Words</h3>
+            <h3>Thousands of words</h3>
             <p>Ballad / Loss &amp; Longing</p>
           </div>
         </a>
 
-        <!-- Cursed Voice -->
-        <a href="music/cursed-voice.html" class="music-card" data-tags="2026 rap">
+        <a href="music/algorithm-junkies.html" class="music-card" data-tags="single" id="track-algorithm-junkies">
           <div class="music-card-art">
-            <img src="assets/tracks/cursed-voice.jpg" alt="Cursed Voice" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/algorithm-junkies.jpeg" alt="Algorithm Junkies" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Algorithm Junkies</h3>
+            <p>Rap / SNS Critique</p>
+          </div>
+        </a>
+
+        <a href="music/cursed-voice.html" class="music-card" data-tags="single" id="track-cursed-voice">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/cursed-voice.jpeg" alt="Cursed Voice" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>Cursed Voice</h3>
@@ -433,41 +414,21 @@
           </div>
         </a>
 
-        <!-- アルゴリズムジャンキー -->
-        <a href="music/algorithm-junkie.html" class="music-card" data-tags="2026 rap">
+        <a href="music/yukinohara.html" class="music-card" data-tags="single" id="track-yukinohara">
           <div class="music-card-art">
-            <img src="assets/tracks/algorithm-junkie.jpg" alt="アルゴリズムジャンキー" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/yukinohara.jpeg" alt="ゆきのはら" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>アルゴリズムジャンキー</h3>
-            <p>Rap / SNS Critique</p>
-          </div>
-        </a>
-
-        <!-- ゆきのはら -->
-        <a href="music/yukinohara.html" class="music-card" data-tags="2026">
-          <div class="music-card-art">
-            <img src="assets/tracks/yukinohara.jpg" alt="ゆきのはら" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>ゆきのはら -the challenger-</h3>
+            <h3>ゆきのはら</h3>
             <p>Challenge / Snow</p>
           </div>
         </a>
 
-        <!-- 夏の終わり -->
-        <a href="music/summer-ends.html" class="music-card" data-tags="2026">
+        <a href="music/natsu-no-owari.html" class="music-card" data-tags="single" id="track-natsu-no-owari">
           <div class="music-card-art">
-            <img src="assets/tracks/summer-ends.jpg" alt="夏の終わり" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/natsu-no-owari.png" alt="夏の終わり" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>夏の終わり</h3>
@@ -475,101 +436,139 @@
           </div>
         </a>
 
-        <!-- 朽ち果てたドライフラワー -->
-        <a href="music/dry-flower.html" class="music-card" data-tags="original">
+        <!-- ========== REMIX / LIVE ========== -->
+
+        <a href="music/all-in-my-sky-remix.html" class="music-card" data-tags="remix">
           <div class="music-card-art">
-            <img src="assets/tracks/dry-flower.jpg" alt="朽ち果てたドライフラワー" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/all-in-my-sky-remix.jpeg" alt="ALL IN MY SKY Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>朽ち果てたドライフラワー</h3>
-            <p>Ballad / Regret</p>
+            <h3>ALL IN MY SKY <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
           </div>
         </a>
 
-        <!-- サバイバルショー -->
-        <a href="music/survival-show.html" class="music-card" data-tags="original">
+        <a href="music/zettai-path-remix.html" class="music-card" data-tags="remix">
           <div class="music-card-art">
-            <img src="assets/tracks/survival-show.jpg" alt="サバイバルショー" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/singles/zettai-path-remix.png" alt="絶対Path Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>絶対Path <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/chaos-remix.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/chaos-in-a-ship-remix.jpeg" alt="Chaos Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Chaos in a Ship <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/dissolving-away-remix.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/dissolving-away-remix.jpeg" alt="Dissolving away Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Dissolving away <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/i-can-fly-remix.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/i-can-fly-to-the-stars-remix.jpeg" alt="I can fly Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>I can fly to the stars <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/just-running-through-remix.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/just-running-through-remix.jpeg" alt="Just Running Through Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Just Running Through <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/role-around-remix.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/role-around-remix.png" alt="Role Around Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Role Around <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/watayuki-remix.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/watayuki-remix.jpeg" alt="わたゆき Remix" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>わたゆき <span class="tag-small">Remix</span></h3>
+            <p>Boundary Live</p>
+          </div>
+        </a>
+
+        <a href="music/absolute-path-boundary-live.html" class="music-card" data-tags="remix">
+          <div class="music-card-art">
+            <img src="assets/artwork/singles/absolute-path-boundary-live.jpeg" alt="Absolute Path Boundary Live" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
+          </div>
+          <div class="music-card-info">
+            <h3>Absolute Path <span class="tag-small">Boundary Live</span></h3>
+            <p>2025-2026</p>
+          </div>
+        </a>
+
+        <!-- ========== 2024 ORIGINALS ========== -->
+
+        <a href="music/survival-show-2024.html" class="music-card" data-tags="2024">
+          <div class="music-card-art">
+            <img src="assets/artwork/2024/survival-show.jpeg" alt="サバイバルショー" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
             <h3>サバイバルショー</h3>
-            <p>Dark / Endless Loop</p>
+            <p>2024 Original</p>
           </div>
         </a>
 
-        <!-- わたゆき -->
-        <a href="music/watayuki.html" class="music-card" data-tags="2025">
+        <a href="music/dry-flower-2024.html" class="music-card" data-tags="2024">
           <div class="music-card-art">
-            <img src="assets/artwork/album-main.jpeg" alt="わたゆき" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/2024/dry-flower.jpeg" alt="朽ち果てたドライフラワー" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>わたゆき -spring song-</h3>
-            <p>Ballad / Memory &amp; Spring</p>
+            <h3>朽ち果てたドライフラワー</h3>
+            <p>2024 Original</p>
           </div>
         </a>
 
-        <!-- Blowing in the Wind (sunset remake) -->
-        <a href="music/sunset-fading-away.html" class="music-card" data-tags="2025">
+        <a href="music/whisper-in-the-gentle-wind.html" class="music-card" data-tags="2024">
           <div class="music-card-art">
-            <img src="assets/tracks/fading-away.jpg" alt="The Sunset Fading Away" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
+            <img src="assets/artwork/2024/whisper-in-the-gentle-wind.jpeg" alt="Whisper in the Gentle Wind" loading="lazy">
+            <div class="music-card-overlay"><span class="music-card-play">&#9654;</span></div>
           </div>
           <div class="music-card-info">
-            <h3>The Sunset Fading Away <span class="tag-small">2025</span></h3>
-            <p>Remake</p>
-          </div>
-        </a>
-
-        <!-- Deep Fake -->
-        <a href="music/deep-fake.html" class="music-card" data-tags="original">
-          <div class="music-card-art">
-            <img src="assets/artwork/album-dark.jpeg" alt="Deep Fake" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>Deep Fake</h3>
-            <p>Dark / Social Deception</p>
-          </div>
-        </a>
-
-        <!-- Express Train -->
-        <a href="music/express-train.html" class="music-card" data-tags="original">
-          <div class="music-card-art">
-            <img src="assets/artwork/album-wings-half.jpeg" alt="Express Train" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>Express Train</h3>
-            <p>Speed / Life Rush</p>
-          </div>
-        </a>
-
-        <!-- 秋の風 -->
-        <a href="music/autumn-wind.html" class="music-card" data-tags="original">
-          <div class="music-card-art">
-            <img src="assets/artwork/album-clean.jpeg" alt="秋の風" loading="lazy">
-            <div class="music-card-overlay">
-              <span class="music-card-play">&#9654;</span>
-            </div>
-          </div>
-          <div class="music-card-info">
-            <h3>秋の風</h3>
-            <p>Seasonal / Fading Memory</p>
+            <h3>Whisper in the Gentle Wind</h3>
+            <p>2024 Original</p>
           </div>
         </a>
 

@@ -528,40 +528,41 @@ body {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
-.artist-avatar {
-  width: 80px;
-  height: 80px;
+.artist-photo {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  object-position: center 20%;
   margin: 0 auto 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem;
-  color: var(--bg);
-  letter-spacing: 2px;
+  border: 2px solid rgba(201, 168, 76, 0.3);
+  transition: var(--transition);
 }
 
-.artist-avatar.shela {
-  background: linear-gradient(135deg, #8a4c7c, #c97ca8);
-}
-
-.artist-avatar.kiva {
-  background: linear-gradient(135deg, #4c6ac9, #7c9ce8);
+.artist-card:hover .artist-photo {
+  border-color: var(--gold);
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.2);
 }
 
 .artist-name {
   font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .artist-role {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.artist-role-sub {
+  font-size: 0.65rem;
+  color: var(--gold-dark);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 16px;

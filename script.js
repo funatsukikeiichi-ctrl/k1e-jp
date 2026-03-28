@@ -33,27 +33,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Track Accordion =====
+  // ===== Music Grid Filter =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const musicCards = document.querySelectorAll('.music-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      musicCards.forEach(card => {
+        const tags = card.dataset.tags || '';
+        if (filter === 'all' || tags.includes(filter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // ===== Track Accordion (for track pages) =====
   document.querySelectorAll('.track-header').forEach(header => {
     header.addEventListener('click', () => {
       const track = header.parentElement;
       const wasOpen = track.classList.contains('open');
-
-      // Close all
-      document.querySelectorAll('.track.open').forEach(t => {
-        t.classList.remove('open');
-      });
-
-      // Toggle clicked
-      if (!wasOpen) {
-        track.classList.add('open');
-      }
+      document.querySelectorAll('.track.open').forEach(t => t.classList.remove('open'));
+      if (!wasOpen) track.classList.add('open');
     });
   });
 
   // ===== Scroll Animations =====
   const fadeEls = document.querySelectorAll(
-    '.about-grid, .wv-card, .link-card, .section-title, .section-sub'
+    '.about-grid, .artist-card, .music-card, .link-card, .section-title, .section-sub, .track-hero-grid, .lyrics-body'
   );
 
   fadeEls.forEach(el => el.classList.add('fade-in'));
@@ -69,25 +83,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeEls.forEach(el => observer.observe(el));
 
-  // Fallback: if IntersectionObserver doesn't fire within 2s, show all
+  // Fallback
   setTimeout(() => {
     fadeEls.forEach(el => el.classList.add('visible'));
   }, 1500);
 
   // ===== Nav Background on Scroll =====
   const nav = document.getElementById('nav');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 100) {
-      nav.style.background = 'rgba(10, 10, 15, 0.95)';
-    } else {
-      nav.style.background = 'rgba(10, 10, 15, 0.85)';
-    }
-
-    lastScroll = scrollY;
-  }, { passive: true });
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.style.background = 'rgba(10, 10, 15, 0.95)';
+      } else {
+        nav.style.background = 'rgba(10, 10, 15, 0.85)';
+      }
+    }, { passive: true });
+  }
 
 });

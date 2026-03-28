@@ -957,8 +957,13 @@ body {
   position: relative;
 }
 
+.album-art-wrap {
+  max-width: 400px;
+}
+
 .album-art-large {
   width: 100%;
+  max-width: 400px;
   border-radius: var(--radius);
   box-shadow: 0 20px 60px rgba(201, 168, 76, 0.2);
   transition: var(--transition);

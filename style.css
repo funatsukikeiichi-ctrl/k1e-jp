@@ -829,6 +829,138 @@ body {
 
 .track-nav a:hover { color: var(--gold); }
 
+/* ===== UTAORA COLLABORATION ===== */
+.utaora-collab {
+  background:
+    radial-gradient(circle at 14% 16%, rgba(255, 111, 89, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 74%, rgba(201, 168, 76, 0.14), transparent 32%),
+    var(--bg2);
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+.utaora-collab-head {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.utaora-kicker {
+  color: #ff806b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+
+.utaora-lead {
+  color: var(--text);
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.utaora-copy {
+  color: var(--text-dim);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.utaora-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.utaora-works {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.utaora-work-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-radius: 18px;
+  background: rgba(10, 10, 15, 0.7);
+}
+
+.utaora-work-card > img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.utaora-work-body {
+  padding: 26px 24px;
+}
+
+.utaora-work-body > span {
+  color: #ff806b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.utaora-work-body h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--gold-light);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  margin: 6px 0 8px;
+}
+
+.utaora-work-body p {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+}
+
+.utaora-video-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.utaora-video-links a,
+.footer-collab a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.utaora-video-links a:hover,
+.footer-collab a:hover {
+  color: var(--gold-light);
+}
+
+.utaora-rights {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 26px auto 0;
+}
+
+@media (max-width: 900px) {
+  .utaora-works { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .utaora-work-card { grid-template-columns: 1fr; }
+  .utaora-work-card > img { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
+  .utaora-work-body { padding: 22px; }
+  .utaora-actions { display: grid; }
+  .utaora-actions .btn { width: 100%; justify-content: center; }
+}
+
 /* ===== LINKS ===== */
 .links { background: var(--bg); }
 
@@ -905,6 +1037,10 @@ body {
   color: var(--text-muted);
   font-style: italic;
   opacity: 0.5;
+}
+
+.footer-collab {
+  margin-top: 14px;
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
